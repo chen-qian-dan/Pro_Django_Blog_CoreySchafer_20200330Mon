@@ -23,4 +23,4 @@ def home(request): # handle the traffic from home page.
 
 
 def about(request): # about page
-    return render(request, 'blog/about.html')
+    return render(request, 'blog/about.html', {'title': 'About'})
