@@ -4,6 +4,12 @@
         <title></title>
     </head>
     <body>
-        <h1>Blog home!</h1>
+        <!--posts is the key of context-->
+        <!--{{ a }} means a is variable-->
+        {% for post in posts %}
+            <h1>{{ post.title }}</h1>
+            <p>By {{ post.author }} on {{ post.date_posted }}</p>
+            <p>{{ post.content }}</p>
+        {% endfor %}
     </body>
 </html>
