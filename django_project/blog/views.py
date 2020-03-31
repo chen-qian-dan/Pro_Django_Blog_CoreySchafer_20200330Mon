@@ -3,13 +3,13 @@ from django.shortcuts import render
 posts = [
     {
         'author': 'Qian', 
-        'title': 'ML',
+        'title': 'Blog 1: ML',
         'content': 'Machine Learning',
         'date_posted': 'March 31, 2020',
     },
     {
         'author': 'Chen', 
-        'title': 'CV',
+        'title': 'Blog 2: CV',
         'content': 'Computer Vision',
         'date_posted': 'March 31, 2020',
     }
