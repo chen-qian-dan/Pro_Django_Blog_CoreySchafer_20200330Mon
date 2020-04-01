@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Post
 
 posts = [
     {
@@ -17,7 +18,7 @@ posts = [
 
 def home(request): # handle the traffic from home page.
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context) # then home.html can access posts by the key 'posts'
 
