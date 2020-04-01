@@ -10,3 +10,6 @@ class Post(models.Model):
     # on_delete=models.CASCADE means if the user is deleted, 
     # we want to delete all the posts from that user as well. 
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
