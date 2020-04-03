@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 from .models import Post
 
 # posts = [
@@ -21,6 +22,13 @@ def home(request): # handle the traffic from home page.
         'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context) # then home.html can access posts by the key 'posts'
+
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'blog/home.html' # <app>/<model>_<viewtype>.html
+    context_object_name = 'posts'
+
 
 
 def about(request): # about page
